@@ -43,3 +43,26 @@ p {
 .btn:hover {
   background-color: #e03e00;
 }
+.boton-reclamar {
+  position: absolute;
+  left: 50%;
+  bottom: 40px; /* distancia desde abajo */
+  transform: translateX(-50%);
+  padding: 18px 50px;
+  background-color: #ff5722;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 0 20px #00000099;
+  z-index: 10;
+}
+
+/* En pantallas grandes, se baja un poco más */
+@media (min-width: 768px) {
+  .boton-reclamar {
+    bottom: 80px;
+  }
+}
+
