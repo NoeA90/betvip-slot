@@ -1,61 +1,41 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  background: url('suerte.jpg') no-repeat center center fixed;
+  font-family: 'Arial', sans-serif;
+  background: url('fondo.jpg') no-repeat center center fixed;
   background-size: cover;
-  color: white;
-  text-align: center;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.boton-reclamar {
   position: relative;
-}
-
-.container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  backdrop-filter: brightness(0.9);
-}
-
-h1 {
-  font-size: 2.2em;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 4px #000;
-}
-
-p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 3px #000;
-}
-
-.btn {
-  position: absolute;
-  left: 50%;
-  bottom: 40px; /* distancia desde el borde inferior */
-  transform: translateX(-50%);
-  background-color: #ff4500;
-  border: none;
-  color: white;
-  padding: 15px 35px;
-  font-size: 1.2em;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  margin-bottom: 40px; /* espacio entre botón y borde inferior */
+  padding: 18px 50px;
+  background-color: #ff5722;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 0 20px #00000099;
   z-index: 10;
-  box-shadow: 0 0 12px #000;
 }
 
-.btn:hover {
-  background-color: #e03e00;
-}
-
-/* En pantallas grandes, baja un poco más */
+/* Versión escritorio: acomoda mejor la imagen */
 @media (min-width: 768px) {
-  .btn {
-    bottom: 80px;
+  body {
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: contain;
+    justify-content: flex-end;
+  }
+
+  .boton-reclamar {
+    margin-bottom: 60px;
+    font-size: 1.3em;
   }
 }
-
-
