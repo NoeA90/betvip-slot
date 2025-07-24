@@ -1,14 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Acceso Bet300</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acceso Bet</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: url('fondo.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; /* botón a la derecha */
+      padding-right: 5%;
+    }
+    .boton-acceso {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background: #0ff;
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+      animation: pulso 1.5s infinite;
+      cursor: pointer;
+    }
+    @keyframes pulso {
+      0%, 100% {
+        box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+      }
+      50% {
+        box-shadow: 0 0 20px #00ffff80, 0 0 30px #00ffff80, 0 0 60px #00ffff80;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .boton-acceso {
+        font-size: 1rem;
+        padding: 12px 20px;
+      }
+      body {
+        justify-content: center; /* centrado en mobile */
+        padding: 0;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="overlay">
-    <a href="https://pch.bet300vip.com/" class="boton-neon">ACCESO</a>
-  </div>
+  <a href="https://pch.bet300vip.com/" class="boton-acceso">ACCESO</a>
 </body>
 </html>
