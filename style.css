@@ -1,41 +1,66 @@
+/* Fondo completo con imagen */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
-  background: url('fondo.png') no-repeat center center fixed;
+  background-image: url('fondo.jpg'); /* Cambia a nombre real del archivo si lo subís */
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
+  font-family: 'Arial', sans-serif;
 }
 
-.boton-reclamar {
-  position: relative;
-  margin-bottom: 40px; /* espacio entre botón y borde inferior */
-  padding: 18px 50px;
-  background-color: #ff5722;
+/* Capa para posicionar el botón */
+.overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8%;
+}
+
+/* Botón estilo neón */
+.boton-neon {
+  font-size: 24px;
+  padding: 15px 40px;
   color: #fff;
   text-decoration: none;
-  font-size: 1.5em;
-  border-radius: 20px;
-  font-weight: bold;
-  box-shadow: 0 0 20px #00000099;
-  z-index: 10;
+  border: 2px solid #f0f;
+  border-radius: 10px;
+  background: transparent;
+  box-shadow: 0 0 15px #f0f, 0 0 40px #f0f;
+  animation: parpadeo 2s infinite;
+  transition: transform 0.2s;
 }
 
-/* Versión escritorio: acomoda mejor la imagen */
-@media (min-width: 768px) {
-  body {
-    background-attachment: scroll;
-    background-position: center top;
-    background-size: contain;
-    justify-content: flex-end;
+.boton-neon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #fff, 0 0 60px #f0f;
+}
+
+/* Efecto animado */
+@keyframes parpadeo {
+  0%, 100% {
+    box-shadow: 0 0 15px #f0f, 0 0 40px #f0f;
+  }
+  50% {
+    box-shadow: 0 0 5px #f0f, 0 0 20px #f0f;
+  }
+}
+
+/* Responsive para mobile */
+@media (max-width: 768px) {
+  .boton-neon {
+    font-size: 18px;
+    padding: 12px 30px;
   }
 
-  .boton-reclamar {
-    margin-bottom: 60px;
-    font-size: 1.3em;
+  .overlay {
+    justify-content: center;
+    padding-right: 0;
   }
 }
