@@ -3,61 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Acceso Bet</title>
+  <title>Ingreso Directo</title>
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-    body, html {
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-      font-family: Arial, sans-serif;
-    }
-    body {
-      background: url('fondo1.jpg') no-repeat center center fixed;
+      background: url('fondo-final.png') no-repeat center center fixed;
       background-size: cover;
+      font-family: 'Arial', sans-serif;
       display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
       align-items: center;
-      justify-content: flex-end; /* botón a la derecha */
-      padding-right: 5%;
-    }
-    .boton-acceso {
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      background: #0ff;
-      color: #000;
-      border: none;
-      border-radius: 10px;
-      text-decoration: none;
-      box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
-      animation: pulso 1.5s infinite;
-      cursor: pointer;
-    }
-    @keyframes pulso {
-      0%, 100% {
-        box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
-      }
-      50% {
-        box-shadow: 0 0 20px #00ffff80, 0 0 30px #00ffff80, 0 0 60px #00ffff80;
-      }
+      height: 100vh;
     }
 
-    @media screen and (max-width: 768px) {
-      .boton-acceso {
-        font-size: 1rem;
-        padding: 12px 20px;
-      }
-      body {
-        justify-content: center; /* centrado en mobile */
-        padding: 0;
-      }
+    .boton-acceso {
+      margin-bottom: 40px;
+      padding: 18px 40px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      background: #0ff;
+      border: 2px solid #0ff;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+      animation: parpadeo 1.5s infinite;
+      transition: transform 0.2s ease;
+    }
+
+    .boton-acceso:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes parpadeo {
+      0%, 100% { box-shadow: 0 0 10px #0ff; }
+      50% { box-shadow: 0 0 20px #0ff, 0 0 40px #0ff; }
     }
   </style>
 </head>
 <body>
-  <a href="https://pch.bet300vip.com/" class="boton-acceso">ACCESO</a>
+  <a class="boton-acceso" href="https://pch.bet300vip.com/" target="_blank">ACCESO</a>
 </body>
 </html>
